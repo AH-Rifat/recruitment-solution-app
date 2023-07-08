@@ -293,3 +293,36 @@ body {
 .contact-info i {
   margin-right: 5px;
 }
+
+/* for responsive */
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+  }
+  .navbar-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2rem;
+  }
+  .feature-card {
+    margin-left: -1.5rem;
+  }
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 3.5rem;
+    padding: 1.5rem 0;
+    left: 0;
+    background-color: #3366cc;
+  }
+  .navbar-link-item:hover {
+    margin-left: 1rem;
+    padding: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navBtn {
+    display: none;
+  }
+}
