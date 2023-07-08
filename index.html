@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Recruitment solution app</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-logo">Recruitment Solution App</div>
+      <nav>
+        <ul class="navbar-links">
+          <li class="navbar-link-item">
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-link-item">
+            <a href="./search.html" class="navbar-link">Search</a>
+          </li>
+          <li class="navbar-link-item">
+            <a href="#" class="navbar-link">About Us</a>
+          </li>
+          <li class="navbar-link-item">
+            <a href="#contactSection" class="navbar-link">Contact</a>
+          </li>
+          <li class="navbar-link-item-login">
+            <a href="./login.html" class="login-btn">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <h1>Streamline Your Hiring Process</h1>
+      <p>
+        Find top talent and hire efficiently with our online recruitment
+        solution.
+      </p>
+      <a href="#" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="features-section">
+      <div class="feature-card">
+        <h2>Efficient Hiring</h2>
+        <p>Save time and resources by automating your hiring process.</p>
+      </div>
+
+      <div class="feature-card">
+        <h2>Advanced Search</h2>
+        <p>Find the perfect candidates with our powerful search filters.</p>
+      </div>
+
+      <div class="feature-card">
+        <h2>Seamless Collaboration</h2>
+        <p>Work seamlessly with your team to evaluate and hire candidates.</p>
+      </div>
+    </section>
+
+    <div class="contact-container">
+      <h2 id="contactSection">Contact Us</h2>
+      <form class="contact-form">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2023 Recruitment Solution App. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

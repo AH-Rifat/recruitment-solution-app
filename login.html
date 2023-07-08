@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Login and Register</title>
+    <link rel="stylesheet" href="./assets/auth.css" />
+  </head>
+  <body>
+    <!-- Login Form -->
+    <div class="form-container">
+      <h2>User Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Username/Email</label>
+          <input type="text" id="login-email" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required />
+        </div>
+        <div class="form-actions">
+          <button type="submit">Login</button>
+          <p><a href="#">Forgot password?</a></p>
+          <p>
+            Not Registred ? <a href="./registration.html">Registration here</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Password Strength Indicator
+      const passwordInput = document.getElementById("registration-password");
+      const passwordStrength = document.getElementById("password-strength");
+
+      passwordInput.addEventListener("input", function () {
+        const password = passwordInput.value;
+        const strength = calculatePasswordStrength(password);
+
+        if (strength === "weak") {
+          passwordStrength.textContent = "Password Strength: Weak";
+          passwordStrength.style.color = "red";
+        } else if (strength === "medium") {
+          passwordStrength.textContent = "Password Strength: Medium";
+          passwordStrength.style.color = "orange";
+        } else if (strength === "strong") {
+          passwordStrength.textContent = "Password Strength: Strong";
+          passwordStrength.style.color = "green";
+        }
+      });
+
+      function calculatePasswordStrength(password) {
+        // Add your own password strength calculation logic here
+        if (password.length < 6) {
+          return "weak";
+        } else if (password.length < 10) {
+          return "medium";
+        } else {
+          return "strong";
+        }
+      }
+    </script>
+  </body>
+</html>

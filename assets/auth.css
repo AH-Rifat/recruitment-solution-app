@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border-radius: 1.2rem;
+  box-shadow: 0.5rem 0.5rem 10rem #a5b8df;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus {
+  border: 2px solid #3366cc;
+  outline: none;
+}
+
+.password-strength {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-group .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-group .info-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.form-actions button {
+  background-color: #3366cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.form-actions button:hover {
+  background-color: #204080;
+}
+
+.form-actions a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.form-actions a:hover {
+  text-decoration: underline;
+}

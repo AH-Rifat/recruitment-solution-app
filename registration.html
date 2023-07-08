@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Login and Register</title>
+    <link rel="stylesheet" href="./assets/auth.css" />
+  </head>
+  <body>
+    <!-- Registration Form -->
+    <div class="form-container">
+      <h2>User Registration</h2>
+      <form id="registration-form">
+        <div class="form-group">
+          <label for="company-name">Name</label>
+          <input type="text" id="company-name" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-info">Contact Information</label>
+          <input type="text" id="contact-info" required />
+        </div>
+        <div class="form-group">
+          <label for="registration-email">Email</label>
+          <input type="email" id="registration-email" required />
+        </div>
+        <div class="form-group">
+          <label for="registration-password">Password</label>
+          <input type="password" id="registration-password" required />
+          <div class="password-strength" id="password-strength"></div>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Register</button>
+          <p>Already have an account? <a href="./login.html">Login here</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Password Strength Indicator
+      const passwordInput = document.getElementById("registration-password");
+      const passwordStrength = document.getElementById("password-strength");
+
+      passwordInput.addEventListener("input", function () {
+        const password = passwordInput.value;
+        const strength = calculatePasswordStrength(password);
+
+        if (strength === "weak") {
+          passwordStrength.textContent = "Password Strength: Weak";
+          passwordStrength.style.color = "red";
+        } else if (strength === "medium") {
+          passwordStrength.textContent = "Password Strength: Medium";
+          passwordStrength.style.color = "orange";
+        } else if (strength === "strong") {
+          passwordStrength.textContent = "Password Strength: Strong";
+          passwordStrength.style.color = "green";
+        }
+      });
+
+      function calculatePasswordStrength(password) {
+        // Add your own password strength calculation logic here
+        if (password.length < 6) {
+          return "weak";
+        } else if (password.length < 10) {
+          return "medium";
+        } else {
+          return "strong";
+        }
+      }
+    </script>
+  </body>
+</html>
